@@ -1,0 +1,7 @@
+{
+  "name": "Barterly",
+  "description": "A modern item-barter marketplace platform. Trade what you have, get what you want.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
