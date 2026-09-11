@@ -109,7 +109,7 @@ export function UserProfileView({ userId, onSelectListing, onReportUser }: UserP
                 <span>•</span>
                 <span className="flex items-center gap-1">
                   <Calendar className="w-3.5 h-3.5 text-neutral-400" />
-                  Member since {new Date(targetUser.createdAt).toLocaleDateString()}
+                  Member since {targetUser.joinedDate}
                 </span>
               </div>
             </div>
@@ -213,9 +213,9 @@ export function UserProfileView({ userId, onSelectListing, onReportUser }: UserP
                 "{rev.comment}"
               </p>
 
-              {rev.badges && rev.badges.length > 0 && (
+              {rev.tags && rev.tags.length > 0 && (
                 <div className="flex flex-wrap gap-1.5 pt-1">
-                  {rev.badges.map((b) => (
+                  {rev.tags.map((b) => (
                     <span
                       key={b}
                       className="px-2 py-0.5 rounded-md bg-emerald-50 border border-emerald-200 text-[10px] font-bold text-emerald-800"

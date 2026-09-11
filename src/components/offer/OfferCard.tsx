@@ -128,7 +128,7 @@ export function OfferCard({ offer, onCounter, onRefresh }: OfferCardProps) {
           <div className="min-w-0 flex-1">
             <span className="text-[10px] uppercase font-bold text-neutral-400 block">Target Item</span>
             <p className="text-xs font-bold text-neutral-900 truncate">{offer.listing.title}</p>
-            <p className="text-[11px] text-neutral-500">{offer.listing.condition}</p>
+            <p className="text-[11px] text-neutral-500 capitalize">{offer.listing.condition?.replace(/_/g, ' ')}</p>
           </div>
         </div>
 
