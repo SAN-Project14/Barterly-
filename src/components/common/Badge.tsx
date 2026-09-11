@@ -35,19 +35,23 @@ export function Badge({ variant = 'default', value, children, className = '' }: 
         return 'bg-neutral-100 text-neutral-600 border-neutral-200';
       case 'rejected':
       case 'hidden':
+      case 'removed':
+      case 'reported':
         return 'bg-rose-50 text-rose-700 border-rose-200';
 
       // Offer Statuses
+      case 'sent':
+        return 'bg-sky-50 text-sky-700 border-sky-200';
       case 'pending':
         return 'bg-amber-50 text-amber-700 border-amber-200';
       case 'countered':
         return 'bg-indigo-50 text-indigo-700 border-indigo-200';
       case 'accepted':
         return 'bg-emerald-50 text-emerald-700 border-emerald-200';
-      case 'rejected':
       case 'cancelled':
         return 'bg-rose-50 text-rose-700 border-rose-200';
       case 'withdrawn':
+      case 'expired':
         return 'bg-neutral-100 text-neutral-600 border-neutral-200';
 
       // Trade Statuses

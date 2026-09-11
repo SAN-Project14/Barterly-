@@ -367,7 +367,13 @@ export function DashboardView({ onSelectListing, onOpenCounterModal }: Dashboard
               {recentNotifications.map((notif) => (
                 <div
                   key={notif.id}
-                  onClick={() => notif.linkRoute && navigate(notif.linkRoute)}
+                  onClick={() => {
+                    if (notif.linkRoute === 'listing' && notif.linkId) {
+                      navigate('/listing', notif.linkId);
+                    } else if (notif.linkRoute) {
+                      navigate(`/app/${notif.linkRoute}`, notif.linkId);
+                    }
+                  }}
                   className={`p-3.5 rounded-2xl border transition-all cursor-pointer flex items-start justify-between gap-3 ${
                     notif.isRead ? 'bg-white border-neutral-200/80' : 'bg-emerald-50/50 border-emerald-200'
                   }`}

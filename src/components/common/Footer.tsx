@@ -82,11 +82,7 @@ export function Footer() {
                   Privacy Policy
                 </button>
               </li>
-              <li>
-                <button onClick={() => navigate('/admin')} className="text-indigo-400 hover:text-indigo-300 cursor-pointer">
-                  Admin Operations Console
-                </button>
-              </li>
+
             </ul>
           </div>
 

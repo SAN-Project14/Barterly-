@@ -49,8 +49,10 @@ export function NotificationsView() {
     if (!notif.isRead) {
       await notificationService.markAsRead(notif.id);
     }
-    if (notif.linkRoute) {
-      navigate(`/app/${notif.linkRoute}`);
+    if (notif.linkRoute === 'listing' && notif.linkId) {
+      navigate('/listing', notif.linkId);
+    } else if (notif.linkRoute) {
+      navigate(`/app/${notif.linkRoute}`, notif.linkId);
     } else if (notif.type.includes('offer')) {
       navigate('/app/offers');
     } else if (notif.type.includes('trade')) {
